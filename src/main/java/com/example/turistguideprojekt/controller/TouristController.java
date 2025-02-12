@@ -4,6 +4,7 @@ import com.example.turistguideprojekt.model.TouristAttraction;
 import com.example.turistguideprojekt.service.TouristService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -57,8 +58,18 @@ public class TouristController {
         }
     }
 
+    @GetMapping("/")
+    public String home() {
+        return "index";
+    }
+
     @GetMapping("/about")
     public String about() {
-        return "about";
+        return "redirect:/about";
+    }
+
+    @GetMapping("/contact")
+    public String contact() {
+        return "contact";
     }
 }
