@@ -57,4 +57,8 @@ public class TouristController {
         }
     }
 
+    @GetMapping("/about")
+    public String about() {
+        return "about";
+    }
 }
