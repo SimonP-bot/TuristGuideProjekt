@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RestController
+@RestController //Til API endpoints - returnerer JSON-data
 @RequestMapping("/attractions")
 @CrossOrigin(origins = "*")
 public class TouristController {
@@ -58,18 +58,5 @@ public class TouristController {
         }
     }
 
-    @GetMapping("/")
-    public String home() {
-        return "index";
-    }
 
-    @GetMapping("/about")
-    public String about() {
-        return "redirect:/about";
-    }
-
-    @GetMapping("/contact")
-    public String contact() {
-        return "contact";
-    }
 }
